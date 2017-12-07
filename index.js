@@ -78,14 +78,14 @@ function generateQuestionElement(question, questionIndex) {
       <form id="js-quiz-question">
         <fieldset>
         <legend class="question">Question ${currentQIndex+1} of 10: ${question.text}</legend><br>
-          <div class="answers">
-            <input type="radio" class="js-answer" name="answer" id="0">
+          <div class="answers" id="quiz-answers">
+            <input type="radio" class="js-answer" name="answer" id="0" aria-labelledby="quiz-answers">
             <label for="0" class="button-label">${question.answers[0]}</label><br>
-            <input type="radio" class="js-answer" name="answer" id="1">
+            <input type="radio" class="js-answer" name="answer" id="1" aria-labelledby="quiz-answers">
             <label for="1" class="button-label">${question.answers[1]}</label><br>
-            <input type="radio" class="js-answer" name="answer" id="2">
+            <input type="radio" class="js-answer" name="answer" id="2" aria-labelledby="quiz-answers">
             <label for="2" class="button-label">${question.answers[2]}</label><br>
-            <input type="radio" class="js-answer" name="answer" id="3">
+            <input type="radio" class="js-answer" name="answer" id="3" aria-labelledby="quiz-answers">
             <label for="3" class="button-label">${question.answers[3]}</label><br>
           </div>
           <button class="submit-answer" role="button" type="submit">Submit</button>
@@ -136,7 +136,7 @@ function generateFeedback(currentIndex, selectedAnswer) {
       <fieldset class="answer-fieldset">
       <div class="if-nothing-chosen">
         <legend><h2 class="answer-text">You need to choose an answer...</h2></legend>
-        <iframe src="https://giphy.com/embed/aAv3oNw804Rwc" width="480" height="233" frameBorder="0" class="giphy-embed"></iframe><br>
+        <iframe src="https://giphy.com/embed/aAv3oNw804Rwc" width="480" height="233" frameBorder="0" class="giphy-embed" title="You need to choose video"></iframe><br>
         <button class="to-current" id="toCurrentQuestion">Back</button>
       </div>
       </fieldset>
@@ -151,7 +151,7 @@ function generateFeedback(currentIndex, selectedAnswer) {
       <div class="if-correct">
         <legend><h2 class="answer-text">Yes, that's correct!</h2></legend>
           <div class="number-correct js-number-correct"><h3>${APP.numCorrect} correct | ${APP.numWrong} incorrect</h3></div>
-          <iframe src="https://giphy.com/embed/lfmLzyIbqgCI0" width="480" height="270" frameBorder="0" class="giphy-embed"></iframe><br>
+          <iframe src="https://giphy.com/embed/lfmLzyIbqgCI0" width="480" height="270" frameBorder="0" class="giphy-embed" title="You got it correct video"></iframe><br>
         <button class="to-next" id="toFinalPage">Next</button>
       </div>
       </fieldset>
@@ -165,7 +165,7 @@ function generateFeedback(currentIndex, selectedAnswer) {
       <div class="if-wrong">
         <legend><h2 class="answer-text">No, that's wrong! The correct answer is ${correction}.</h2></legend>
           <div class="number-correct js-number-correct"><h3>${APP.numCorrect} correct | ${APP.numWrong} incorrect</h3></div>
-          <iframe src="https://giphy.com/embed/75kmPCiwooxdm" width="480" height="252" frameBorder="0" class="giphy-embed"></iframe><br>
+          <iframe src="https://giphy.com/embed/75kmPCiwooxdm" width="480" height="252" frameBorder="0" class="giphy-embed" title="You got it wrong video"></iframe><br>
           <button class="to-next" id="toFinalPage">Next</button>
       </div>
       </fieldset>
