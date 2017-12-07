@@ -1,0 +1,187 @@
+/* General structure & positioning */
+* {
+    font: 100%/1.2 'Didact Gothic', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #DEB887;
+    width: 75%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .start-page {
+    text-align: center;
+  }
+  
+  .js-answer, .button-label {
+    margin-bottom: 10px;
+  }
+  
+  .answers {
+    position: relative;
+    top: -20px;
+  }
+  
+  .final-page {
+    text-align: center;
+  }
+  
+  .answer-fieldset {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  fieldset {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 2px solid brown;
+  }
+  
+  .final-score {
+    margin-top: -20px;
+    margin-bottom: 10px;  
+  }
+  
+  .final-page {
+    margin-top: 50px;
+  }
+  
+  /* Button styling & button positioning */
+  .go-button {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    width: 85px;
+    height: 55px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 25px;
+  }
+  
+  .submit-answer, .to-next, .to-current {
+    width: 80px;
+    height: 50px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+  
+  .to-current {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .to-next {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  input[type=radio] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .start-over {
+    margin-top: 20px;
+    width: 175px;
+    height: 50px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 25px;
+  }
+  
+  /* Media queries */
+  @media only screen and (min-width: 320px) {
+    .homepage-logo {
+      width: 50%;
+    }
+    
+    .homepage-image {
+      width: 60%;
+      height: 60%;
+    }
+    
+    .giphy-embed {
+      width: 85%;
+    }
+    
+    .answer-fieldset {
+      width: 50%; 
+      height: 25%;
+    }
+    
+    .answer-text, .number-correct {
+      font-size: 60%;
+    }
+    
+    * {
+      font-size: 105%;
+      line-height: 1.3;
+    }
+    
+    input[type=radio] {
+      transform: scale(1.2);
+      margin-top: -2px;
+    }
+    
+    h1 {
+      font-size: 110%;
+    }
+  }
+  
+  @media only screen and (min-width: 640px) {
+    .homepage-logo {
+      width: 70%;
+    }
+    
+    .homepage-image {
+      width: 80%;
+      height: 80%;
+    }
+    
+    * {
+      font-size: 107%;
+      line-height: 1.5;
+    }
+    
+    .giphy-embed {
+      width: 100%;
+    }
+    
+    .answer-fieldset {
+      width: 100%;  
+    }
+    
+    .answer-text, .number-correct {
+      font-size: 100%;
+    }
+    
+    input[type=radio] {
+      transform: scale(1.7);
+      margin-top: -4px;
+    }
+    
+    h1 {
+      font-size: 150%;
+    }
+  }
+  
+  @media only screen and (min-width: 160px) {
+    .giphy-embed {
+      width: 85%;
+    }
+    
+    .answer-fieldset {
+      width: 50%; 
+      height: 25%;
+    }
+  }
