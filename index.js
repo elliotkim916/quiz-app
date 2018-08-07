@@ -7,7 +7,7 @@ const QUESTIONS = [
     correctIndex: 2
   },
   {
-    text: "What kind of car does Donna drive?",
+    text: 'What kind of car does Donna drive?',
     answers: ['Jaguar', 'Rolls Royce', 'Mercedes Benz', 'Ferrari'],
     correctIndex: 2
   },
@@ -17,7 +17,7 @@ const QUESTIONS = [
     correctIndex: 0
   },
   {
-    text: "Where was Leslie Knope born?",
+    text: 'Where was Leslie Knope born?',
     answers: ['Eagleton', 'Pawnee', 'Indianapolis', 'Washington D.C.'],
     correctIndex: 0
   },
@@ -32,12 +32,12 @@ const QUESTIONS = [
     correctIndex: 1
   },
   {
-    text: "What is the name of the lizard god that the Pawnee doomsday cult, the Reasonabilists, worship?",
+    text: 'What is the name of the lizard god that the Pawnee doomsday cult, the Reasonabilists, worship?',
     answers: ['Zorg', 'Zorb', 'Zorp', 'Zord'],
     correctIndex: 2
   },
   {
-    text: "Which Tom Haverford profile did Leslie match with while she was online dating?",
+    text: 'Which Tom Haverford profile did Leslie match with while she was online dating?',
     answers: ['Tom N. Haverford', 'Tom B. Haverford', 'Tom J. Haverford', 'Tom A. Haverford'],
     correctIndex: 0
   },
@@ -51,7 +51,7 @@ const QUESTIONS = [
     answers: ['JJ`s Diner', 'Pawnee`s unhealthy lifestyle', 'Math', 'Li`l Sebastian'],
     correctIndex: 3
   }
-  ];
+];
 
 const APP = {
   questions: QUESTIONS,
@@ -65,14 +65,13 @@ let currentQ = questions[currentQIndex];
 
 // user selects Go button to begin quiz
 function handleGoButton() {
-    $('.js-go-button').on('click', function(event) {
-      //console.log('clicked');
-      $('.start-page').empty();
-      renderQuestion();
-    });
- }
+  $('.js-go-button').on('click', function() {
+    $('.start-page').empty();
+    renderQuestion();
+  });
+}
 
-function generateQuestionElement(question, questionIndex) {
+function generateQuestionElement(question) {
   return `
   <div class="container">
       <form id="js-quiz-question">
@@ -102,7 +101,7 @@ function renderQuestion() {
 
 // currentQIndex increments when user selects the next button
 function handleNextQuestionButton() {
-  $('.js-quiz-feedback').on('click', '.to-next', function(event) {
+  $('.js-quiz-feedback').on('click', '.to-next', function() {
     currentQIndex++; 
     if (currentQIndex === questions.length) {
       $('.js-quiz-place').empty();
@@ -171,14 +170,14 @@ function generateFeedback(currentIndex, selectedAnswer) {
       </fieldset>
     </div>
       `);
-    } 
+  } 
 }
 
 // when user clicks the back button, will render the current question
 function handleUnansweredQuestion() {
-  $('.js-quiz-feedback').on('click', '.to-current', function(event) {
-  $('.js-quiz-feedback').empty();
-  renderQuestion();
+  $('.js-quiz-feedback').on('click', '.to-current', function() {
+    $('.js-quiz-feedback').empty();
+    renderQuestion();
   });
 }
 
@@ -198,12 +197,12 @@ function renderResults() {
 }
 
 function resetQuiz() {
-  $('.js-quiz-place').on('click', '.start-over', function(event) {
-  APP.numCorrect = 0;
-  APP.numWrong = 0;
-  currentQIndex = 0;
-  currentQ = questions[currentQIndex];
-  renderQuestion();
+  $('.js-quiz-place').on('click', '.start-over', function() {
+    APP.numCorrect = 0;
+    APP.numWrong = 0;
+    currentQIndex = 0;
+    currentQ = questions[currentQIndex];
+    renderQuestion();
   });
 }
 
