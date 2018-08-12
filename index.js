@@ -74,22 +74,22 @@ function handleGoButton() {
 function generateQuestionElement(question) {
   return `
   <div class="container">
-      <form id="js-quiz-question">
-        <fieldset>
-        <legend class="question">Question ${currentQIndex+1} of 10: ${question.text}</legend><br>
-          <div class="answers" id="quiz-answers">
-            <input type="radio" class="js-answer" name="answer" id="0" aria-labelledby="quiz-answers">
-            <label for="0" class="button-label">${question.answers[0]}</label><br>
-            <input type="radio" class="js-answer" name="answer" id="1" aria-labelledby="quiz-answers">
-            <label for="1" class="button-label">${question.answers[1]}</label><br>
-            <input type="radio" class="js-answer" name="answer" id="2" aria-labelledby="quiz-answers">
-            <label for="2" class="button-label">${question.answers[2]}</label><br>
-            <input type="radio" class="js-answer" name="answer" id="3" aria-labelledby="quiz-answers">
-            <label for="3" class="button-label">${question.answers[3]}</label><br>
-          </div>
-          <button class="submit-answer" role="button" type="submit">Submit</button>
-        </fieldset>
-      </form>
+    <form id="js-quiz-question">
+      <fieldset>
+      <legend class="question">Question ${currentQIndex+1} of 10: ${question.text}</legend><br>
+        <div class="answers" id="quiz-answers">
+          <input type="radio" class="js-answer" name="answer" id="0" aria-labelledby="quiz-answers">
+          <label for="0" class="button-label">${question.answers[0]}</label><br>
+          <input type="radio" class="js-answer" name="answer" id="1" aria-labelledby="quiz-answers">
+          <label for="1" class="button-label">${question.answers[1]}</label><br>
+          <input type="radio" class="js-answer" name="answer" id="2" aria-labelledby="quiz-answers">
+          <label for="2" class="button-label">${question.answers[2]}</label><br>
+          <input type="radio" class="js-answer" name="answer" id="3" aria-labelledby="quiz-answers">
+          <label for="3" class="button-label">${question.answers[3]}</label><br>
+        </div>
+        <button class="submit-answer" role="button" type="submit">Submit</button>
+      </fieldset>
+    </form>
   </div>`;   
 }
 
